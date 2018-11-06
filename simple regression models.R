@@ -19,3 +19,5 @@ model4 <- lm(`Sale Price` ~ Ba + `Sq ft`, data = kingston_housing[kingston_housi
 
 tab_model(model2)
 
+predict(model4, newdata = kingston_housing[kingston_housing$`Condo?` == 1,])
+predict(model4, newdata = kingston_housing[kingston_housing$`Condo?` == 0,])
